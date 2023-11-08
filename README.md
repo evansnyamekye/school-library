@@ -31,9 +31,7 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
-
 - **Ruby**
-
 
 ### Key Features <a name="key-features"></a>
 
@@ -43,27 +41,21 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
-
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
-
 In order to run this project you need:
 
-
 Example command:
-
 ```sh
  gem install ruby
 ```
 
-
 ### Setup
 
 Clone this repository to your desired folder:
-
 
 Example commands:
 
@@ -72,19 +64,13 @@ Example commands:
   cd Decode-Morse
 ```
 -
-
 ### Install
-
 Install this project with:
-
 
 Example command:
 
 ```sh
   cd school-library
-```
--
-
 ### Usage
 
 To run the project, execute the following command:
@@ -99,7 +85,6 @@ Example command:
 <!-- ### Run tests
 
 Tests are not available yet. -->
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
