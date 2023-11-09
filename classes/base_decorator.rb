@@ -1,6 +1,6 @@
-require './nameable' //call forth a libarary (external in ruby)
+require './nameable'
 
-class BaseDecorator < Nameable //instance 
+class BaseDecorator < Nameable
   def initialize(nameable)
     super()
     @nameable = nameable
