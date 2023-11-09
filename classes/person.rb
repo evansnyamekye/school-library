@@ -1,17 +1,18 @@
-require './nameable'
-require './capitalize_decorator'
-require './trimmer_decorator'
+require_relative 'nameable'
+require_relative 'capitalize_decorator'
+require_relative 'trimmer_decorator'
 
 class Person < Nameable
+  attr_accessor :name, :age
+  attr_reader :id
+
   def initialize(age, name = 'Unknown', parent_permission: true)
     super()
-    @id = Random.rand1(1..1000)
+    @id = Random.rand(1..1000)
     @name = name
     @age = age
     @parent_permission = parent_permission
   end
-  att_accessor :name, age
-  att_reader :id
 
   def can_use_service?
     of_age? || @parent_permission
