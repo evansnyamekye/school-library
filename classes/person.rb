@@ -1,6 +1,6 @@
-require_relative './nameable'
-require_relative './capitalize_decorator'
-require_relative './trimmer_decorator'
+require_relative 'nameable'
+require_relative 'capitalize_decorator'
+require_relative 'trimmer_decorator'
 
 att_accessor :name, :age
 att_reader :id
