@@ -11,12 +11,12 @@ class Person < Nameable
     super()
     @id = generate_id
     @name = name
-    @age = age
     @parent_permission = parent_permission
+    @age = age
     @rental = []
   end
 
-  def can_use_service?
+  def can_use_services?
     of_age? || @parent_permission
   end
 
@@ -30,12 +30,12 @@ class Person < Nameable
 
   private
 
-  def add_rental(date, book)
-    Rental.new(date, book, self)
-  end
-
   def of_age?
     @age && @age >= 18
+  end
+
+  def add_rental(date, book)
+    Rental.new(date, self, book)
   end
 
   def generate_id

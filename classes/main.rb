@@ -6,7 +6,7 @@ def display_ui
   puts '2 - list all people'
   puts '3 - create a person'
   puts '4 - create a book'
-  puts '5 - create a person'
+  puts '5 - create a rental'
   puts '6 - list all rentals for a given person id'
   puts '7 - exit'
   user_choice = gets.chomp.to_i
