@@ -1,22 +1,57 @@
-require_relative 'student'
-require_relative 'classroom'
-require_relative 'person'
-require_relative 'rental'
-require_relative 'book'
+require_relative 'app'
 
-# Create Instances
+# rubocup: disable Metrics
 
-class1 = classroom.new('maths')
-student1 = Student.new(12)
-class1.add_student(student1)
-student2 = Student.new(15)
-student2.classroom = class1
+def display_ui
+  puts 'Please choose an action by entering a number:'
+  puts '1 - list all books'
+  puts '2 - list all people'
+  puts '3 - create a person'
+  puts '4 - create a book'
+  puts '5 - create a rental'
+  puts '6 - list all rentals for a given person id'
+  puts '7 - exit'
+  user_choice = gets.chomp.to_i
+  puts user_choice
+  excecute(user_choice)
+end
 
-book1 = Book.new('book1', 'author1')
-person1 = Person.new(12)
-rental1 = Rental.new('2017-12-22', book1, person1)
+def excecute(user_choice)
+case user_choice
 
-puts rental1.book.title
-puts rental1.person.age
-puts student2.classroom.label
-puts class1.students.students.map(&:age)
+when 1
+  puts App.list_books
+  display_ui
+
+when 2
+  puts App.list_persons
+  display_ui
+
+when 3
+  App.create_person
+  display_ui
+
+when 4
+  App.create_book
+  display_ui
+
+when 5
+  App.create_rental
+  display_ui
+
+when 6
+  App.list_rentals
+  display_ui
+
+when 7
+  puts 'Thank you for using the app. Good bye for now !'
+
+else
+  puts ' Invalid choice . Please enter a valid option'
+  display_ui
+ end
+end
+# rubocup: enable Metrics
+
+puts 'Welcome to School Library App!'
+display_ui
