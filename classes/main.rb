@@ -1,22 +1,47 @@
-require_relative 'student'
-require_relative 'classroom'
-require_relative 'person'
-require_relative 'rental'
-require_relative 'book'
+require './app'
 
-# Create Instances
+def main
+  app = App.new
 
-class1 = classroom.new('maths')
-student1 = Student.new(12)
-class1.add_student(student1)
-student2 = Student.new(15)
-student2.classroom = class1
+  puts 'Welcome to School Library App!'
+  puts ' '
 
-book1 = Book.new('book1', 'author1')
-person1 = Person.new(12)
-rental1 = Rental.new('2017-12-22', book1, person1)
+  loop do
+    display_menu
+    option = gets.chomp
 
-puts rental1.book.title
-puts rental1.person.age
-puts student2.classroom.label
-puts class1.students.students.map(&:age)
+    if option == '7'
+      puts 'Thank you for using this app!'
+      break
+    end
+    options(option, app)
+  end
+end
+
+def display_menu
+  puts 'Please choose an option by entering a number:'
+  puts '1 - List all books'
+  puts '2 - List all people'
+  puts '3 - Create a person'
+  puts '4 - Create a book'
+  puts '5 - Create a rental'
+  puts '6 - List all rentals for a given person id'
+  puts '7 - Exit'
+  puts ' '
+  puts 'Enter number: '
+end
+
+def options(option, app)
+  case option
+  when '1' then app.book_list
+  when '2' then app.people_list
+  when '3' then app.person_create
+  when '4' then app.new_book
+  when '5' then app.new_rental
+  when '6' then app.rental_list
+  else
+    puts 'This is not a valid option'
+  end
+end
+
+main
