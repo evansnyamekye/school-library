@@ -1,37 +1,47 @@
-require_relative 'app'
+require './app'
 
-def display_ui
-  puts 'Please choose an action by entering a numbe:'
-  puts '1 - list all book'
-  puts '2 - list all people'
-  puts '3 - create a person'
-  puts '4 - create a book'
-  puts '5 - create a rental'
-  puts '6 - list all rentals for a given person id'
-  puts '7 - exit'
-  user_choice = gets.chomp.to_i
-  excecute_choice(user_choice)
-end
+def main
+  app = App.new
 
-def excecute_choice(user_choice)
-  actions = {
-    1 => -> { App.list_books },
-    2 => -> { App.list_persons },
-    3 => -> { App.create_person },
-    4 => -> { App.create_book },
-    5 => -> { App.create_rental },
-    6 => -> { App.list_rentals },
-    7 => -> { about 'Thank you for using the app. Goodbye for now!' }
-  }
+  puts 'Welcome to School Library App!'
+  puts ' '
 
-  action = actions[user_choice]
-  if action
-    action.call
-  else
-    puts ' Invalid choice . Please enter a valid option'
+  loop do
+    display_menu
+    option = gets.chomp
+
+    if option == '7'
+      puts 'Thank you for using this app!'
+      break
+    end
+    options(option, app)
   end
-  display_ui
 end
 
-puts 'Welcome to School Library App!'
-display_ui
+def display_menu
+  puts 'Please choose an option by entering a number:'
+  puts '1 - List all books'
+  puts '2 - List all people'
+  puts '3 - Create a person'
+  puts '4 - Create a book'
+  puts '5 - Create a rental'
+  puts '6 - List all rentals for a given person id'
+  puts '7 - Exit'
+  puts ' '
+  puts 'Enter number: '
+end
+
+def options(option, app)
+  case option
+  when '1' then app.book_list
+  when '2' then app.people_list
+  when '3' then app.person_create
+  when '4' then app.new_book
+  when '5' then app.new_rental
+  when '6' then app.rental_list
+  else
+    puts 'This is not a valid option'
+  end
+end
+
+main
