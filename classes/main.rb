@@ -43,5 +43,4 @@ def options(option, app)
     puts 'This is not a valid option'
   end
 end
-
 main
