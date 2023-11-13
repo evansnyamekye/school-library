@@ -3,8 +3,9 @@
 
 # 📗 Table of Contents
 
+- [school-library](#school-library)
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Decode Morse Code ](#-decode-morse-code-)
+- [📖 School Library ](#-school-library-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -12,9 +13,6 @@
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
-    - [Usage](#usage)
-    - [Run tests](#run-tests)
-    - [Deployment](#deployment)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -97,6 +95,11 @@ Tests are not available yet. -->
 - GitHub: [Al Amin Khan Shakil](https://github.com/Al-Amin-Khan-Shakil)
 - Twitter: [Al Amin Khan Shakil](https://twitter.com/AlAminKhan85004)
 - LinkedIn: [Al Amin Khan Shakil](https://www.linkedin.com/in/al-amin-khan-shakil/)
+
+
+👤 **Aisha Alselwi**
+- GitHub: [Aisha Alselwi](https://github.com/AlselwiAisha/)
+- LinkedIn: [Aisha Alselwi](https://www.linkedin.com/in/aisha-alselwi/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
